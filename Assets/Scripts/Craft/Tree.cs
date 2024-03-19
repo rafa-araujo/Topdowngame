@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Testando commit 2
+//Criando branch 01-Plantar 
 public class Tree : MonoBehaviour
 {
     [SerializeField] private float treeHealth;
