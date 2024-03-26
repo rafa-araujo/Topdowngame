@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
 
         if(isWatering)
         {
-            playerItems.currentWater -= 0.01f;
+            playerItems.currentWater -= 0.1f;
         }
         
     }
