@@ -123,18 +123,22 @@ public class Player : MonoBehaviour
                 speed = 0f;
             }
 
-        if(Input.GetMouseButtonUp(0) || playerItems.currentWater < 0)
+            if(Input.GetMouseButtonUp(0) || playerItems.currentWater < 0)
+                {
+                    isWatering = false;
+                    speed = initialSpeed;
+                }
+            
+            if(isWatering)
             {
-                isWatering = false;
-                speed = initialSpeed;
+                playerItems.currentWater -= 0.01f;
             }
         }
-
-        if(isWatering)
+        else
         {
-            playerItems.currentWater -= 0.01f;
+            isWatering = false;
         }
-        
+
     }
 
     void OnDig()
@@ -153,7 +157,10 @@ public class Player : MonoBehaviour
                 speed = initialSpeed;
             }
         }
-        
+        else
+        {
+            isDigging = false;
+        }
     }
 
     void OnCutting()
@@ -171,6 +178,10 @@ public class Player : MonoBehaviour
                 isCutting = false;
                 speed = initialSpeed;
             }
+        }
+        else
+        {
+            isCutting = false;
         }
         
     }
