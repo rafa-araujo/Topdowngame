@@ -94,12 +94,6 @@ public class Player : MonoBehaviour
             OnDig();
             OnWatering();
         }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene("teste");
-        }
-
     }
 
     private void FixedUpdate() 

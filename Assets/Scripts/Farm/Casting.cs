@@ -34,12 +34,6 @@ public class Casting : MonoBehaviour
         {
             //conseguiu pescar um peixe
             Instantiate(fishPrefab, player.transform.position + new Vector3(Random.Range(-2.5f, -1f), 0f, 0f), Quaternion.identity);
-            Debug.Log("pescou");
-        }
-        else
-        {
-            //não pescou
-            Debug.Log("não pescou");
         }
     }
 
